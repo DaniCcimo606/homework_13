@@ -1,11 +1,11 @@
-@import 'tools';
+@import './tools';
 
-@import 'header';
+@import './components/header';
 
-@import 'about-us';
-@import 'services';
-@import 'team';
-@import 'publications';
-@import 'contact';
+@import './components/about-us';
+@import './components/services';
+@import './components/team';
+@import './components/publications';
+@import './components/contact';
 
-@import 'footer';
+@import './components/footer';
