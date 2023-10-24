@@ -1,17 +1,97 @@
 .container {
     background: linear-gradient(229deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
     .header {
+        padding: 50px 60px 30px;
         display: flex;
+        justify-content: space-between;
         .header__item {
             .header__logo {
 
             }
             .header__contact {
                 display: flex;
+                align-items: center;
+                color: $light;
+                .header__contact--item {
+                    margin: 0 6px;
+                    &:empty {
+                        width: 6px;
+                        height: 6px;
+                        background: #E6E6F0;
+                        border-radius: 60px;
+                        border-radius: 60px;
+                    }
+                }
+                .header__localization {
+                    .header__localization--btn {
+                        padding: 7px 6px;
+                        border-radius: 8px;
+                        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+                        font-size: 12px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        transition: $mainTransition;
+                        background-color: transparent;
+                        color: $light;
+                        &:hover {
+                            background-color: rgba(255, 255, 255, 0.20);
+                        }
+                        &:focus {
+                            background-color: $mainColor;
+                        }
+                    }
+                }
+                .header__contact--info {
+                    color: $light;
+                }
+                .header__contact--number {
+                    font-weight: 700;
+                    color: $light;
+                }
+                .header__contact--social {
+                    font-size: 0;
+                    svg {
+                        path {
+                            fill: $light;
+                            transition: $mainTransition;
+                        }
+                    }
+                    &:hover {
+                        path {
+                            fill: $mainColor;
+                        }
+                    }
+                }
             }
             .header__nav {
                 .header__nav--list {
+                    gap: 15px;
                     display: flex;
+                    .header__nav--item {
+                        .header__nav--link {
+                            color: $light;
+                            &::after {
+                                content: '';
+                                width: 0;
+                                border-bottom: 2px solid $light;
+                                transition: width $mainTransition;
+                                display: block;
+                            }
+                            &:hover {
+                                &::after {
+                                    width: 100%;
+                                }
+                            }
+                            &:active {
+                                transition: 0s;
+                                color: $mainColor;
+                                &::after {
+                                    border-color: $mainColor;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

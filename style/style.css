@@ -1,12 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+body {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
 .container {
   background: linear-gradient(229deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
 }
 .container .header {
+  padding: 50px 60px 30px;
   display: flex;
+  justify-content: space-between;
 }
 .container .header .header__item .header__contact {
   display: flex;
+  align-items: center;
+  color: white;
+}
+.container .header .header__item .header__contact .header__contact--item {
+  margin: 0 6px;
+}
+.container .header .header__item .header__contact .header__contact--item:empty {
+  width: 6px;
+  height: 6px;
+  background: #E6E6F0;
+  border-radius: 60px;
+  border-radius: 60px;
+}
+.container .header .header__item .header__contact .header__localization .header__localization--btn {
+  padding: 7px 6px;
+  border-radius: 8px;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.2s;
+  background-color: transparent;
+  color: white;
+}
+.container .header .header__item .header__contact .header__localization .header__localization--btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.container .header .header__item .header__contact .header__localization .header__localization--btn:focus {
+  background-color: #F0145A;
+}
+.container .header .header__item .header__contact .header__contact--info {
+  color: white;
+}
+.container .header .header__item .header__contact .header__contact--number {
+  font-weight: 700;
+  color: white;
+}
+.container .header .header__item .header__contact .header__contact--social {
+  font-size: 0;
+}
+.container .header .header__item .header__contact .header__contact--social svg path {
+  fill: white;
+  transition: 0.2s;
+}
+.container .header .header__item .header__contact .header__contact--social:hover path {
+  fill: #F0145A;
 }
 .container .header .header__item .header__nav .header__nav--list {
+  gap: 15px;
   display: flex;
+}
+.container .header .header__item .header__nav .header__nav--list .header__nav--item .header__nav--link {
+  color: white;
+}
+.container .header .header__item .header__nav .header__nav--list .header__nav--item .header__nav--link::after {
+  content: "";
+  width: 0;
+  border-bottom: 2px solid white;
+  transition: width 0.2s;
+  display: block;
+}
+.container .header .header__item .header__nav .header__nav--list .header__nav--item .header__nav--link:hover::after {
+  width: 100%;
+}
+.container .header .header__item .header__nav .header__nav--list .header__nav--item .header__nav--link:active {
+  transition: 0s;
+  color: #F0145A;
+}
+.container .header .header__item .header__nav .header__nav--list .header__nav--item .header__nav--link:active::after {
+  border-color: #F0145A;
 }/*# sourceMappingURL=style.css.map */
