@@ -1,69 +1,72 @@
-.footer {
-    padding: 30px 60px;
-    display: flex;
-    justify-content: space-between;
-    .footer__item.empty {
-        margin: 0 10px;
-        &:empty {
-            width: 6px;
-            height: 6px;
-            background: #B3B3BA;
-            border-radius: 60px;
-            border-radius: 60px;
-        }
-    }
-    .footer__item {
-        .footer__info {
-            padding-bottom: 21px;
-            display: flex;
-            align-items: center;
-            span {
-                color: #323264;
+.footer__container {
+    background-color: #F5F5FA;
+    .footer {
+        padding: 30px 60px;
+        display: flex;
+        justify-content: space-between;
+        .footer__item.empty {
+            margin: 0 10px;
+            &:empty {
+                width: 6px;
+                height: 6px;
+                background: #B3B3BA;
+                border-radius: 60px;
+                border-radius: 60px;
             }
-            a {
-                font-size: 12px;
-                font-weight: 700;
-                letter-spacing: 1px;
-                text-transform: uppercase;
-                color: #24A3FF;
-                transition: $mainTransition;
-                &:hover {
-                    color: $mainColor;
+        }
+        .footer__item {
+            .footer__info {
+                padding-bottom: 21px;
+                display: flex;
+                align-items: center;
+                span {
+                    color: $primaryColor;
                 }
-            }
-        }
-        .footer__contact {
-            display: flex;
-            align-items: center;
-            .footer__contact--social {
-                font-size: 0;
-                svg {
-                    path {
-                        transition: $mainTransition;
-                        &:hover {
-                            fill: $mainColor;
-                        }
+                a {
+                    font-size: 12px;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    color: $secondaryColor;
+                    transition: $mainTransition;
+                    &:hover {
+                        color: $mainColor;
                     }
                 }
             }
-            .footer__contact--number {
-                font-weight: 700;
-                color: #323264;
-            }
-            .footer__contact--mail {
-                font-weight: 700;
-                transition: $mainTransition;
-                color: #24A3FF;
-                &:hover {
-                    color: $mainColor;
+            .footer__contact {
+                display: flex;
+                align-items: center;
+                .footer__contact--social {
+                    font-size: 0;
+                    svg {
+                        path {
+                            transition: $mainTransition;
+                            &:hover {
+                                fill: $mainColor;
+                            }
+                        }
+                    }
+                }
+                .footer__contact--number {
+                    font-weight: 700;
+                    color: $primaryColor;
+                }
+                .footer__contact--mail {
+                    font-weight: 700;
+                    transition: $mainTransition;
+                    color: $secondaryColor;
+                    &:hover {
+                        color: $mainColor;
+                    }
                 }
             }
-        }
-        .footer__marking {
-            span {
-                color: #B3B3BA;
+            .footer__marking {
                 span {
-                    text-transform: uppercase;
+                    color: #B3B3BA;
+                    span {
+                        text-transform: uppercase;
+                    }
                 }
             }
         }

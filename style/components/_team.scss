@@ -1,0 +1,91 @@
+.team {
+    padding-top: 203px;
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .main__item {
+            display: flex;
+            justify-content: center;
+            h1 {
+                width: 71%;
+                padding-bottom: 60px;
+                font-size: 38px;
+                font-weight: 700;
+                color: $mainColor;
+            }
+            .main__grid {
+                display: flex;
+                gap: 60px;
+                flex-direction: column;
+                .row {
+                    display: flex;
+                    gap: 4%;
+                    &:last-child {
+                        padding-bottom: 60px;
+                    }
+                    .col {
+                        .img-wrap {
+                            display: block;
+                            height: 400px;
+                            border-radius: 12px;
+                            overflow: hidden;
+                            &:hover ~ .title {
+                                .title__text {
+                                    h4 {
+                                        color: $mainColor;
+                                    }
+                                }
+                                .btn-wrap {
+                                    svg {
+                                        path {
+                                            stroke: $mainColor;
+                                        }
+                                    }
+                                }
+                            }
+                            img {
+                                display: block;
+                                width: 100%;
+                            }
+                        }
+                        .title {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            .title__text {
+                                display: flex;
+                                flex-direction: column;
+                                h4 {
+                                    padding: 15px 0 5px;
+                                    font-weight: 700;
+                                    transition: $mainTransition;
+                                    color: $primaryColor;
+                                }
+                                span {
+                                    font-size: 14px;
+                                    color: $phantomColor;
+                                }
+                            }
+                            .btn-wrap {
+                                &:hover {
+                                    svg {
+                                        path {
+                                            stroke: $mainColor;
+                                        }
+                                    }
+                                }
+                                font-size: 0;
+                                svg {
+                                    path {
+                                        transition: $mainTransition;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

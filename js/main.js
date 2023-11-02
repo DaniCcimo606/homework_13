@@ -1,8 +1,6 @@
 // Имя страници в логотипе
 let titleName = document.title;
 let titleText = document.querySelector(`.web-title`)
-console.log(titleName);
-console.log(titleText);
 
 if (document.title =! `Home`) {
     document.title = titleName;
