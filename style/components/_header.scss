@@ -19,7 +19,8 @@
                     align-items: center;
                     .title__name {
                         font-size: 36px;
-                        color: $light;
+                        text-transform: lowercase;
+                        color: $primaryColor;
                     }
                 }
             }
@@ -215,7 +216,10 @@
             }
         }
     }
-    .prim_header {
+}
+.prim_header {
+    background: #fff;
+    .header {
         .header__item {
             .header__logo {
                 a {
