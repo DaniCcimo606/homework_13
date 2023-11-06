@@ -1,5 +1,4 @@
 .team {
-    padding-top: 60px;
     .main {
         display: flex;
         flex-direction: column;
@@ -8,7 +7,7 @@
             display: flex;
             justify-content: center;
             h1 {
-                width: 71%;
+                width: 83%;
                 padding-bottom: 60px;
                 font-size: 38px;
                 font-weight: 700;
@@ -44,6 +43,22 @@
                                     }
                                 }
                             }
+                            &:active ~ .title {
+                                .title__text {
+                                    h4 {
+                                        color: $mainColorActive;
+                                        transition: 0s;
+                                    }
+                                }
+                                .btn-wrap {
+                                    svg {
+                                        path {
+                                            stroke: $mainColorActive;
+                                            transition: 0s;
+                                        }
+                                    }
+                                }
+                            }
                             img {
                                 display: block;
                                 width: 100%;
@@ -68,6 +83,7 @@
                                 }
                             }
                             .btn-wrap {
+                                font-size: 0;
                                 &:hover {
                                     svg {
                                         path {
@@ -75,7 +91,13 @@
                                         }
                                     }
                                 }
-                                font-size: 0;
+                                &:active {
+                                    svg {
+                                        path {
+                                            stroke: $mainColorActive;
+                                        }
+                                    }
+                                }
                                 svg {
                                     path {
                                         transition: $mainTransition;

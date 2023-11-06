@@ -1,0 +1,125 @@
+.hero-services {
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    .hero__heading {
+        font-size: 38px;
+        font-weight: 700;
+        color: $mainColor;
+    }
+    .hero__row {
+        display: flex;
+        gap: 60px;
+        .hero__col {
+            width: calc(100% / 3);
+            a {
+                display: inline-block;
+                margin-bottom: 30px;
+                &:hover {
+                    svg {
+                        transform: scale(.9)
+                    }
+                &:active ~ h3 {
+                    transition: 0s;
+                    color: $mainColorActive;
+                }
+                }
+                &:hover ~ h3 {
+                    color: $mainColor;
+                    
+                }
+                svg {
+                    transition: $mainTransition;
+                }
+            }
+            h3 {
+                padding-bottom: 15px;
+                font-size: 22px;
+                font-weight: 700;
+                transition: $mainTransition;
+                color: $secondaryColor;
+                &:hover {
+                    color: $mainColor;
+                }
+                &:active {
+                    transition: 0s;
+                    color: $mainColorActive;
+                }
+            }
+            p {
+                line-height: 26px;
+                color: $light;
+            }
+        }
+    }
+}
+.services {
+    .main {
+        padding-bottom: 60px;
+        .main__heading {
+            padding: 80px 0 30px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-align: center;
+            color: $primaryColor;
+        }
+        .main__col-wrap {
+            max-width: 1720px;
+            margin: 0 auto;
+            border-radius: 15px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            .main__col {
+                height: 120px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:nth-child(1) {
+                    background-color: #1C4280;
+                }
+                &:nth-child(2) {
+                    background-color: #143646;
+                }
+                &:nth-child(3) {
+                    background-color: #F48B30;
+                }
+                &:nth-child(4) {
+                    background-color: #9E4DC3;
+                }
+                &:nth-child(5) {
+                    background-color: #FD9339;
+                }
+                &:nth-child(6) {
+                    background-color: #E2E2E4;
+                }
+                &:nth-child(7) {
+                    background-color: #C71C36;
+                }
+                &:nth-child(8) {
+                    background-color: #DCF3F9;
+                }
+                &:nth-child(9) {
+                    background-color: #EAEAEA;
+                }
+                &:nth-child(10) {
+                    background-color: #282240;
+                }
+                &:nth-child(11) {
+                    background-color: #1D4568;
+                }
+                &:nth-child(12) {
+                    background-color: black;
+                }
+            }
+        }
+    }
+}

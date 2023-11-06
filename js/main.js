@@ -3,15 +3,15 @@ let titleName = document.title;
 let webTitle = document.querySelector(`.web-title`)
 let titleText = document.querySelector(`.title__name`)
 
-if (document.title != `Home`) {
+if (document.title !== `Home`) {
     document.title = titleName;
     titleText.textContent = titleName;
 } else {
-    document.title = `Home`;
+    document.title == `Home`;
     webTitle.style.display = `none`;
 }
 
-// Активная ссылка в header nav link
+// Действующая ссылка в header nav link
 let b = window.location.href;
 let count = document.querySelector(`.header__nav--list`).querySelectorAll(`.header__nav--item a`).length;
 
@@ -34,7 +34,6 @@ if (document.title == `Home`) {
         tab.addEventListener(`click`, function (e) {
             e.preventDefault();
             const id = e.target.getAttribute(`href`).replace(`#`, ``);
-    
             tabs.forEach(tabItem => {
                 tabItem.classList.remove(`hero__experience--link--target`);
             });
@@ -50,28 +49,28 @@ if (document.title == `Home`) {
 
 
 // Добавляю изменяю макс. ширину для страниц
-let c = document.querySelector(`.header`);
-let container = document.querySelectorAll(`.container`);
-
-if (document.title == `Team`, `Publications`) {
-    c.style.position = `inherit`;
-    container.forEach(element => {
-        element.style.maxWidth = `1600px`;
-        element.style.margin = `0 auto`;
-    });
+if (document.title == `Team` || document.title == `Publications` || document.title == `Services`) {
+    let headPosition = document.querySelector(`.header`);
+    headPosition.style.position = `inherit`;
 }
 
 // Кнопка "news" "articles" на странице Publications
-let publickFloatBg = document.querySelector(`.floating-bg`);
-let news = document.getElementById(`news`);
-let articles = document.getElementById(`articles`);
-
-news.addEventListener(`click`, function () {
-    publickFloatBg.style.width = `50%`;
-})
-articles.addEventListener(`click`, function () {
-    publickFloatBg.style.width = `100%`;
-})
 if (document.title == `Publications`) {
+    let publickFloatBg = document.querySelector(`.floating-bg`);
+    let news = document.getElementById(`news`);
+    let articles = document.getElementById(`articles`);
+    
+    news.addEventListener(`click`, function () {
+        publickFloatBg.style.width = `50%`;
+    })
+    articles.addEventListener(`click`, function () {
+        publickFloatBg.style.width = `100%`;
+    })
     news.click();
+}
+
+// Смена цвета titleContent
+if (document.title == `Services`) {
+    let titleColor = document.querySelector(`.title__name`);
+    titleColor.style.color = `white`;
 }

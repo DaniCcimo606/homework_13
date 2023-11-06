@@ -1,7 +1,7 @@
 .footer__container {
     background-color: #F5F5FA;
     .footer {
-        padding: 30px 60px;
+        padding: 30px 0;
         display: flex;
         justify-content: space-between;
         .footer__item.empty {
@@ -32,6 +32,9 @@
                     &:hover {
                         color: $mainColor;
                     }
+                    &:active {
+                        color: $mainColorActive;
+                    }
                 }
             }
             .footer__contact {
@@ -39,12 +42,23 @@
                 align-items: center;
                 .footer__contact--social {
                     font-size: 0;
+                    &:hover {
+                        svg {
+                            path {
+                                fill: $mainColor;
+                            }
+                        }
+                    }
+                    &:active {
+                        svg {
+                            path {
+                                fill: $mainColorActive;
+                            }
+                        }
+                    }
                     svg {
                         path {
                             transition: $mainTransition;
-                            &:hover {
-                                fill: $mainColor;
-                            }
                         }
                     }
                 }
@@ -58,6 +72,9 @@
                     color: $secondaryColor;
                     &:hover {
                         color: $mainColor;
+                    }
+                    &:active {
+                        color: $mainColorActive;
                     }
                 }
             }

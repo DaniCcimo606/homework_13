@@ -1,9 +1,33 @@
 .header__container {
+    position: relative;
+    border-radius: 0 0 12px 12px;
     background: linear-gradient(229deg, $primaryColor 11.93%, $primaryColor 57.17%, #643E72 87.46%);
+    &::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 1%;
+        height: 10px;
+        width: 98%;
+        border-radius: 0 0 12px 12px;
+        background-color: #CACADB;
+        z-index: 1;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 2%;
+        height: 10px;
+        width: 96%;
+        padding-top: 10px;
+        border-radius: 0 0 12px 12px;
+        background-color: #E7E7F2;
+    }
     .header {
         position: absolute;
         width: 100%;
-        padding: 50px 60px 30px;
+        padding-top: 50px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -67,15 +91,20 @@
                 }
                 .header__contact--social {
                     font-size: 0;
+                    &:hover {
+                        path {
+                            fill: $mainColor;
+                        }
+                    }
+                    &:active {
+                        path {
+                            fill: $mainColorActive;
+                        }
+                    }
                     svg {
                         path {
                             fill: $light;
                             transition: $mainTransition;
-                        }
-                    }
-                    &:hover {
-                        path {
-                            fill: $mainColor;
                         }
                     }
                 }
@@ -101,9 +130,9 @@
                             }
                             &:active {
                                 transition: 0s;
-                                color: #f0145a86;
+                                color: $mainColorActive;
                                 &::after {
-                                    border-color: #f0145a86;
+                                    border-color: $mainColorActive;
                                 }
                             }
                         }
@@ -179,7 +208,7 @@
                             }
                             &:active {
                                 transition: 0s;
-                                color: #f0145a86;
+                                color: $mainColorActive;
                             }
                             &.hero__experience--link--target {
                                 background: var(--gradient-text-red-reversed, linear-gradient(90deg, #EF8080 0.84%, #F0145A 99.96%));
@@ -219,7 +248,18 @@
 }
 .prim_header {
     background: #fff;
+    &::before {
+        content: '';
+        height: 0;
+        width: 0;
+    }
+    &::after {
+        content: '';
+        height: 0;
+        width: 0;
+    }
     .header {
+        padding-bottom: 60px;
         .header__item {
             .header__logo {
                 a {
