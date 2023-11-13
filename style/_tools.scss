@@ -1,6 +1,7 @@
 $mainColor: #F0145A;
 $mainColorActive: rgba(185, 17, 70);
 $secondaryColor: #24A3FF;
+$secondaryColorActive: #1a77b9;
 $primaryColor: #323264;
 $phantomColor: #B3B3BA;
 $light: white;
@@ -16,4 +17,42 @@ body {
 .container {
     max-width: 1600px;
     margin: 0 auto;
+}
+
+.goToPage {
+    position: relative;
+    padding-bottom: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: $mainTransition;
+    color: $secondaryColor;
+    display: inline-block;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 10%;
+        left: 105%;
+        padding: 2.7px;
+        border: solid $secondaryColor;
+        border-width: 0 3px 3px 0;
+        transition: $mainTransition;
+        transform: rotate(-45deg);
+        display: inline-block;
+    }
+    &:hover {
+        color: $mainColor;
+        &::after {
+            border-color: $mainColor;
+        }
+    }
+    &:active {
+        transition: 0s;
+        color: $mainColorActive;
+        &::after {
+            transition: 0s;
+            border-color: $mainColorActive;
+        }
+    }
 }

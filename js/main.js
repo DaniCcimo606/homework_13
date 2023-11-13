@@ -26,29 +26,30 @@ for (let i = 0; i < count; i++) {
 }
 
 // Отмена перехода к табу при нажатии
-let tabs = document.querySelectorAll(`.hero__experience--link`);
-let tabsContent = document.querySelectorAll(`.hero__experience--item--content`);
+let tabs = document.querySelectorAll(`.hero__experience--link, .slider__btn--item`);
+let tabsContent = document.querySelectorAll(`.hero__experience--item--content, .slider__item`);
 
 if (document.title == `Home`) {
     tabs.forEach(tab => {
         tab.addEventListener(`click`, function (e) {
             e.preventDefault();
-            const id = e.target.getAttribute(`href`).replace(`#`, ``);
+            let id = e.target.getAttribute(`href`).replace(`#`, ``);
             tabs.forEach(tabItem => {
-                tabItem.classList.remove(`hero__experience--link--target`);
+                tabItem.classList.remove(`hero__experience--link--target`, `slider__btn--item--target`);
             });
             tabsContent.forEach(tabItem => {
-                tabItem.classList.remove(`hero__experience--item--content--target`);
+                tabItem.classList.remove(`hero__experience--item--content--target`, `slider__item--target`);
             });
-            tab.classList.add(`hero__experience--link--target`);
-            document.getElementById(id).classList.add(`hero__experience--item--content--target`);
+            tab.classList.add(`hero__experience--link--target`, `slider__btn--item--target`);
+            document.getElementById(id).classList.add(`hero__experience--item--content--target`, `slider__item--target`);
         })
     });
     document.querySelector(`.hero__experience--link`).click();
+    document.querySelector(`.slider__btn--item`).click();
 }
 
 
-// Добавляю изменяю макс. ширину для страниц
+// Убираю position для header
 if (document.title == `Team` || document.title == `Publications` || document.title == `Services`) {
     let headPosition = document.querySelector(`.header`);
     headPosition.style.position = `inherit`;

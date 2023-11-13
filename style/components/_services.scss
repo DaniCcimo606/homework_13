@@ -1,55 +1,57 @@
 .hero-services {
     padding: 60px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-    .hero__heading {
-        font-size: 38px;
-        font-weight: 700;
-        color: $mainColor;
-    }
-    .hero__row {
+    .wrap {
         display: flex;
+        flex-direction: column;
         gap: 60px;
-        .hero__col {
-            width: calc(100% / 3);
-            a {
-                display: inline-block;
-                margin-bottom: 30px;
-                &:hover {
-                    svg {
-                        transform: scale(.9)
+        .hero__heading {
+            font-size: 38px;
+            font-weight: 700;
+            color: $mainColor;
+        }
+        .hero__row {
+            display: flex;
+            gap: 60px;
+            .hero__col {
+                width: calc(100% / 3);
+                a {
+                    display: inline-block;
+                    margin-bottom: 30px;
+                    &:hover {
+                        svg {
+                            transform: scale(.9)
+                        }
+                    &:active ~ h3 {
+                        transition: 0s;
+                        color: $mainColorActive;
                     }
-                &:active ~ h3 {
-                    transition: 0s;
-                    color: $mainColorActive;
+                    }
+                    &:hover ~ h3 {
+                        color: $mainColor;
+                        
+                    }
+                    svg {
+                        transition: $mainTransition;
+                    }
                 }
-                }
-                &:hover ~ h3 {
-                    color: $mainColor;
-                    
-                }
-                svg {
+                h3 {
+                    padding-bottom: 15px;
+                    font-size: 22px;
+                    font-weight: 700;
                     transition: $mainTransition;
+                    color: $secondaryColor;
+                    &:hover {
+                        color: $mainColor;
+                    }
+                    &:active {
+                        transition: 0s;
+                        color: $mainColorActive;
+                    }
                 }
-            }
-            h3 {
-                padding-bottom: 15px;
-                font-size: 22px;
-                font-weight: 700;
-                transition: $mainTransition;
-                color: $secondaryColor;
-                &:hover {
-                    color: $mainColor;
+                p {
+                    line-height: 26px;
+                    color: $light;
                 }
-                &:active {
-                    transition: 0s;
-                    color: $mainColorActive;
-                }
-            }
-            p {
-                line-height: 26px;
-                color: $light;
             }
         }
     }

@@ -110,4 +110,74 @@
             }
         }
     }
+    .slider {
+        padding-top: 80px;
+        .slider__item {
+            display: none;
+            .slider__img-wrap {
+                height: 300px;
+                width: 55%;
+                border-radius: 12px 0px 0px 12px;
+                overflow: hidden;
+                img {
+                }
+            }
+            .slider__profile {
+                padding: 30px;
+                border-radius: 0px 12px 12px 0px;
+                background-color: #EDEDF7;
+                .goToPage {
+                    padding-bottom: 20px;
+                }
+                .slider__heading {
+                    padding-bottom: 30px;
+                    font-size: 38px;
+                    font-weight: 700;
+                    color: $mainColor;
+                }
+                h4 {
+                    padding-bottom: 6px;
+                    font-weight: 700;
+                    color: $phantomColor;
+                }
+                p {
+                    font-size: 14px;
+                    line-height: 22px;
+                    color: $phantomColor;
+                }
+            }
+            &.slider__item--target {
+                display: flex;
+            }
+        }
+        .slider__btn {
+            padding-top: 30px;
+            display: flex;
+            justify-content: center;
+            .slider__btn--item-wrap {
+                display: flex;
+                .slider__btn--item {
+                    display: block;
+                    margin-right: 15px;
+                    transition: $mainTransition;
+                    border-radius: 50%;
+                    background-color: #d3edff;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    &:empty {
+                        width: 16px;
+                        height: 16px;
+                    }
+                    &:active {
+                        transition: 0s;
+                        background-color: $secondaryColorActive;
+                    }
+                    &.slider__btn--item--target {
+                        background-color: $secondaryColor;
+                    }
+                }
+            }
+        }
+    }
 }
