@@ -4,17 +4,11 @@
         padding: 30px 0;
         display: flex;
         justify-content: space-between;
-        .footer__item.empty {
-            margin: 0 10px;
-            &:empty {
-                width: 6px;
-                height: 6px;
-                background: #B3B3BA;
-                border-radius: 60px;
-                border-radius: 60px;
-            }
-        }
         .footer__item {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            width: 100%;
             .footer__info {
                 padding-bottom: 21px;
                 display: flex;
@@ -38,6 +32,7 @@
                 }
             }
             .footer__contact {
+                grid-row-start: 2;
                 display: flex;
                 align-items: center;
                 .footer__contact--social {
@@ -79,6 +74,8 @@
                 }
             }
             .footer__marking {
+                grid-column-start: 2;
+                justify-self: end;
                 span {
                     color: #B3B3BA;
                     span {

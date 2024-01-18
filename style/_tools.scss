@@ -11,6 +11,9 @@ $mainTransition: .2s;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
@@ -54,5 +57,22 @@ body {
             transition: 0s;
             border-color: $mainColorActive;
         }
+    }
+}
+
+.empty {
+    margin: 0 10px;
+    &:empty {
+        width: 6px;
+        height: 6px;
+        background: #B3B3BA;
+        border-radius: 60px;
+        border-radius: 60px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .container {
+        max-width: 1320px;
     }
 }

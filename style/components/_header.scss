@@ -32,7 +32,13 @@
         justify-content: space-between;
         align-items: center;
         .header__item {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            width: 100%;
             .header__logo {
+                grid-row-start: 1;
+                grid-row-end: 3;
                 display: flex;
                 align-items: start;
                 a {
@@ -49,19 +55,10 @@
                 }
             }
             .header__contact {
+                justify-self: end;
                 display: flex;
                 align-items: center;
                 color: $light;
-                .header__contact--item {
-                    margin: 0 6px;
-                    &:empty {
-                        width: 6px;
-                        height: 6px;
-                        background: #E6E6F0;
-                        border-radius: 60px;
-                        border-radius: 60px;
-                    }
-                }
                 .header__localization {
                     .header__localization--btn {
                         padding: 7px 6px;
@@ -110,6 +107,8 @@
                 }
             }
             .header__nav {
+                justify-self: end;
+                align-self: end;
                 .header__nav--list {
                     gap: 15px;
                     display: flex;

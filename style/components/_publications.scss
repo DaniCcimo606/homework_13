@@ -8,7 +8,7 @@
             color: $mainColor;
         }
         .main__grid {
-            padding: 30px 0 60px 0;
+            padding: 30px 0;
             border-bottom: 2px solid #E6E6F0;
             display: flex;
             flex-direction: column;
@@ -41,6 +41,7 @@
                 }
             }
             .main__more--btn-wrap {
+                margin-bottom: 30px;
                 padding: 18px 30px;
                 border-radius: 12px;
                 background: $secondaryColor;

@@ -125,3 +125,14 @@
         }
     }
 }
+
+@media screen and (max-width: 1440px) {
+    .services {
+        .main {
+            padding-bottom: 0;
+            .main__col-wrap {
+                border-radius: 0;
+            }
+        }
+    }
+}
