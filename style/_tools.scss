@@ -76,3 +76,21 @@ body {
         max-width: 1320px;
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 904px;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .container {
+        max-width: 640px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        max-width: 315px;
+    }
+}

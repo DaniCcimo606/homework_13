@@ -1,5 +1,5 @@
 .hero-services {
-    padding: 60px 0;
+    padding-bottom: 60px;
     .wrap {
         display: flex;
         flex-direction: column;
@@ -7,13 +7,17 @@
         .hero__heading {
             font-size: 38px;
             font-weight: 700;
-            color: $mainColor;
+            background: linear-gradient(90deg, #F0145A 0.84%, #EF8080 99.96%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .hero__row {
-            display: flex;
-            gap: 60px;
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            grid-template-rows: repeat(2, auto);
+            grid-gap: 60px;
             .hero__col {
-                width: calc(100% / 3);
+                width: 100%;
                 a {
                     display: inline-block;
                     margin-bottom: 30px;
@@ -76,8 +80,7 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(3, 1fr);
-            grid-column-gap: 0px;
-            grid-row-gap: 0px;
+            grid-gap: 0;
             .main__col {
                 height: 120px;
                 width: 100%;
@@ -132,6 +135,74 @@
             padding-bottom: 0;
             .main__col-wrap {
                 border-radius: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .services {
+        .main {
+            .main__col-wrap {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+            }
+        }
+    }
+    .hero-services {
+        .wrap {
+            .hero__heading {
+            }
+            .hero__row {
+                grid-template-columns: auto auto;
+                grid-template-rows: repeat(3, auto);
+                grid-gap: 60px;
+                .hero__col {
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .services {
+        .main {
+            .main__col-wrap {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(6, auto);
+                .main__col {
+                    &:nth-child(7) {
+                        display: none;
+                    }
+                    &:nth-child(8) {
+                        display: none;
+                    }
+                    &:nth-child(9) {
+                        display: none;
+                    }
+                    &:nth-child(10) {
+                        display: none;
+                    }
+                    &:nth-child(11) {
+                        display: none;
+                    }
+                    &:nth-child(12) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .hero-services {
+        .wrap {
+            .hero__heading {
+                font-size: 30px;
+            }
+            .hero__row {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(6, auto);
+                .hero__col {
+                }
             }
         }
     }

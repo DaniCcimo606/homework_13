@@ -2,11 +2,11 @@
     flex: 1;
     padding-bottom: 60px;
     .container {
-        max-width: 1360px;
         .main {
+            width: 100%;
+            padding: 0 7.5%;
             .main__item {
                 display: grid;
-                // grid-template-columns: repeat(2, 1fr);
                 grid-template-columns: 1fr auto;
                 column-gap: 60px;
                 grid-template-rows: auto auto auto;
@@ -173,6 +173,175 @@
                                             box-shadow: 0px 0px 20px 0px rgba(36, 163, 255, 0.50);
                                             color: $light;
                                             background-color: $secondaryColor;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .team-entry {
+        .container {
+            .main {
+                padding: 0;
+                .main__item {
+                    .main__item__title {
+                        .main__item__title__heading {
+                            h1 {
+                            }
+                        }
+                        .main__item__title__description {
+                            flex-direction: column;
+                            gap: 10px;
+                            align-items: start;
+                            padding-bottom: 30px;
+                            .empty {
+                                display: none;
+                            }
+                            .job {
+                            }
+                            .email {
+                                &:active {
+                                }
+                            }
+                            .profile {
+                                &:active {
+                                }
+                            }
+                        }
+                    }
+                    .main__item__contact {
+                        padding-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .team-entry {
+        .container {
+            .main {
+                .main__item {
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: repeat(3, auto);
+                    grid-gap: 30px;
+                    .main__item__img {
+                        grid-row-start: 1;
+                        grid-row-end: 2;
+                        grid-column-start: 1;
+                        grid-column-end: 2;
+                        overflow: hidden;
+                        a {
+                            font-size: 0;
+                            img {
+                                width: 300px;
+                                height: 375px;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                    .main__item__title {
+                        grid-column-start: 2;
+                        align-self: center;
+                        width: 100%;
+                        .main__item__title__heading {
+                            h1 {
+                            }
+                        }
+                        .main__item__title__description {
+                            .empty {
+                            }
+                            .job {
+                            }
+                            .email {
+                                &:active {
+                                }
+                            }
+                            .profile {
+                                &:active {
+                                }
+                            }
+                        }
+                    }
+                    .main__item__description {
+                        grid-row-start: 2;
+                        grid-column-start: 1;
+                        grid-column-end: 3;
+                    }
+                    .main__item__contact {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .team-entry {
+        .container {
+            .main {
+                .main__item {
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-template-rows: repeat(4, auto);
+                    .main__item__img, .main__item__title, .main__item__description, .main__item__contact {
+                        grid-column-start: auto;
+                        grid-column-end: auto;
+                        grid-row-start: auto;
+                        grid-row-end: auto;
+                    }
+                    .main__item__img {
+                        padding-top: 30px;
+                        a {
+                            img {
+                            }
+                        }
+                    }
+                    .main__item__title {
+                        .main__item__title__heading {
+                            h1 {
+                            }
+                        }
+                        .main__item__title__description {
+                            padding: 0;
+                            .empty {
+                            }
+                            .job {
+                            }
+                            .email {
+                                &:active {
+                                }
+                            }
+                            .profile {
+                                &:active {
+                                }
+                            }
+                        }
+                    }
+                    .main__item__description {
+                    }
+                    .main__item__contact {
+                        .pop-up {
+                            .pop-up__close {
+                                &:hover {
+                                }
+                                &:active {
+                                }
+                            }
+                            .pop-up__bg {
+                                .pop-up__content {
+                                    width: 75%;
+                                    .pop-up__content__title {
+                                        h2 {
+                                            font-size: 30px;
                                         }
                                     }
                                 }

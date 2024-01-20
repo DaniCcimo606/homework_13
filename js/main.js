@@ -1,15 +1,73 @@
 // Имя страници в логотипе
-let titleName = document.title;
-let webTitle = document.querySelector('.web-title')
-let titleText = document.querySelector('.title__name')
+const titleName = document.title;
+const webTitle = document.querySelector('.web-title')
+const titleText = document.querySelector('.title__name');
+
+if (document.title == 'Team') {
+    const arr = [];
+    document.querySelectorAll('.title__text').forEach(item => {
+        const h4 = item.querySelector('h4');
+        arr.push(h4.innerHTML);
+    });
+    console.log(arr);
+    localStorage.setItem('headLink', arr);
+}
+
+const headLink = localStorage.getItem('headLink');
+console.log(headLink.split(','));
+const webTitlEntTeam = headLink.split(',');
 
 if (document.title !== 'Home') {
-    document.title = titleName;
     titleText.textContent = titleName;
+    for (let i = 0; i < webTitlEntTeam.length; i++) {
+        if (document.title == webTitlEntTeam[i]) {
+            titleText.textContent = 'team';
+        }
+    }
 } else {
     document.title == 'Home';
     webTitle.style.display = 'none';
 }
+
+
+// Бургер меню
+
+const nav = document.querySelector('.header__nav');
+const burgMenu = document.createElement('div');
+burgMenu.classList.add('burger-menu');
+burgMenu.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
+<path d="M7 10.5H25" stroke="white" stroke-width="2"/>
+<path d="M7 16.5H25" stroke="white" stroke-width="2"/>
+<path d="M7 22.5H25" stroke="white" stroke-width="2"/>
+</svg>`;
+const navList = document.querySelector('.header__nav--list');
+const navClose = document.createElement('li');
+navClose.classList.add('nav__close');
+navClose.id = 'navClose';
+const closeImg = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+<path d="M7 7L25 25" stroke="#EC6F5D" stroke-width="2"/>
+<path d="M25 7L7 25" stroke="#EC6F5D" stroke-width="2"/>
+</svg>`;
+navClose.innerHTML = closeImg;
+setInterval(() => {
+    if (window.innerWidth <= 600) {
+        nav.appendChild(burgMenu);
+        navList.prepend(navClose);
+        burgMenu.addEventListener('click', function (item) {
+            navList.classList.add('show');
+            burgMenu.firstChild.style.animation = 'rotateNav .3s ease-in-out .1s 1';
+        })
+        navClose.addEventListener('click', function (item) {
+            navList.classList.remove('show');
+            burgMenu.firstChild.style.animation = '';
+        })
+    }
+    if (window.innerWidth > 600) {
+        burgMenu.remove();
+        navClose.remove();
+    }
+}, 100);
+
 
 // Действующая ссылка в header nav link
 let b = window.location.href;
@@ -29,8 +87,8 @@ for (let i = 0; i < count; i++) {
     }
 }
 
-// Отмена перехода к табу при нажатии
 
+// Отмена перехода к табу при нажатии
 if (document.title == 'Home') {
     let tabs = document.querySelectorAll('.hero__experience--link, .slider__btn--item');
     let tabsContent = document.querySelectorAll('.hero__experience--item--content, .slider__item');
@@ -59,6 +117,7 @@ if (document.title == 'Team' || document.title == 'Publications' || document.tit
     headPosition.style.position = 'inherit';
 }
 
+
 // Кнопка "news" "articles" на странице Publications
 if (document.title == 'Publications') {
     let publickFloatBg = document.querySelector('.floating-bg');
@@ -74,11 +133,13 @@ if (document.title == 'Publications') {
     news.click();
 }
 
+
 // Смена цвета titleContent
 if (document.title == 'Services') {
     let titleColor = document.querySelector('.title__name');
     titleColor.style.color = 'white';
 }
+
 
 // pop-up
 if (document.title == 'Oksana Kobzar') {
