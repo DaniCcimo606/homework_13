@@ -3,17 +3,22 @@
     width: 98%;
     margin: 0 auto;
     border-radius: 0 0 12px 12px;
-    background-color: #CACADB;
+    background-color: #cacadb;
 }
 .header__tile.mod {
     width: 96%;
     padding-top: 10px;
-    background-color: #E7E7F2;
+    background-color: #e7e7f2;
 }
 .header__container {
     position: relative;
     border-radius: 0 0 12px 12px;
-    background: linear-gradient(229deg, $primaryColor 11.93%, $primaryColor 57.17%, #643E72 87.46%);
+    background: linear-gradient(
+        229deg,
+        $primaryColor 11.93%,
+        $primaryColor 57.17%,
+        #643e72 87.46%
+    );
     overflow: hidden;
     .header {
         position: absolute;
@@ -45,7 +50,7 @@
                     }
                 }
             }
-            .contact {
+            .contacts {
                 justify-self: end;
                 display: flex;
                 align-items: center;
@@ -54,7 +59,7 @@
                     .localization__item {
                         padding: 7px 6px;
                         border-radius: 8px;
-                        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+                        font-family: "Montserrat", Arial, Helvetica, sans-serif;
                         font-size: 12px;
                         font-weight: 700;
                         text-transform: uppercase;
@@ -63,21 +68,21 @@
                         background-color: transparent;
                         color: $light;
                         &:hover {
-                            background-color: rgba(255, 255, 255, 0.20);
+                            background-color: rgba(255, 255, 255, 0.2);
                         }
                         &:focus {
                             background-color: $mainColor;
                         }
                     }
                 }
-                .contact__address {
+                .contacts__address {
                     color: $light;
                 }
-                .contact__number {
+                .contacts__number {
                     font-weight: 700;
                     color: $light;
                 }
-                .contact__social {
+                .contacts__social {
                     font-size: 0;
                     &:hover {
                         path {
@@ -107,7 +112,7 @@
                         .nav__link {
                             color: $light;
                             &::after {
-                                content: '';
+                                content: "";
                                 width: 0;
                                 border-bottom: 2px solid $light;
                                 transition: width $mainTransition;
@@ -141,7 +146,7 @@
         }
     }
     .hero {
-        .hero__img--wrap {
+        .img--wrap {
             position: relative;
             width: fit-content;
             margin: 0 auto;
@@ -176,7 +181,7 @@
                 justify-content: center;
                 .tabs {
                     padding: 15px 60px 15px 0;
-                    border-right: 4px solid rgba(255, 255, 255, 0.30);
+                    border-right: 4px solid rgba(255, 255, 255, 0.3);
                     display: flex;
                     gap: 30px;
                     flex-direction: column;
@@ -186,7 +191,7 @@
                             font-size: 38px;
                             font-weight: 700;
                             transition: $mainTransition;
-                            color: #B3B3BA;
+                            color: #b3b3ba;
                             display: block;
                             &:hover {
                                 color: $mainColor;
@@ -196,7 +201,14 @@
                                 color: $mainColorActive;
                             }
                             &.tab__link--target {
-                                background: var(--gradient-text-red-reversed, linear-gradient(90deg, #EF8080 0.84%, #F0145A 99.96%));
+                                background: var(
+                                    --gradient-text-red-reversed,
+                                    linear-gradient(
+                                        90deg,
+                                        #ef8080 0.84%,
+                                        #f0145a 99.96%
+                                    )
+                                );
                                 background-clip: text;
                                 -webkit-text-fill-color: transparent;
                                 display: inline-block;
@@ -231,15 +243,15 @@
         }
     }
 }
-.prim_header {
+.prim__header {
     background: #fff;
     &::before {
-        content: '';
+        content: "";
         height: 0;
         width: 0;
     }
     &::after {
-        content: '';
+        content: "";
         height: 0;
         width: 0;
     }
@@ -258,19 +270,19 @@
                     }
                 }
             }
-            .contact {
+            .contacts {
                 .localization {
                     .localization__item {
                         color: $phantomColor;
                     }
                 }
-                .contact__address {
+                .contacts__address {
                     color: $phantomColor;
                 }
-                .contact__number {
+                .contacts__number {
                     color: $phantomColor;
                 }
-                .contact__social {
+                .contacts__social {
                     svg {
                         path {
                             fill: $phantomColor;
@@ -335,7 +347,7 @@
             }
         }
     }
-    .prim_header {
+    .prim__header {
         .header {
             .header__item {
                 white-space: nowrap;
@@ -355,7 +367,7 @@
                 .logo {
                     grid-row-start: 2;
                 }
-                .contact {
+                .contacts {
                     justify-self: start;
                 }
                 .nav {
@@ -364,7 +376,7 @@
             }
         }
         .hero {
-            .hero__img--wrap { 
+            .img--wrap {
                 width: auto;
             }
             .experience-wrap {
@@ -437,17 +449,17 @@
                         }
                     }
                 }
-                .contact {
+                .contacts {
                     grid-column-start: 1;
                     grid-column-end: 3;
                     justify-content: space-between;
                     width: 100%;
                     padding: 10px 15px;
-                    background-color: #F5F5FA33;
-                    .contact__address {
+                    background-color: #f5f5fa33;
+                    .contacts__address {
                         display: none;
                     }
-                    .contact__social {
+                    .contacts__social {
                         display: none;
                     }
                 }
@@ -491,10 +503,10 @@
                                 font-weight: 700;
                                 transition: $mainTransition;
                                 color: $secondaryColor;
-                                background-color: #F5F5FA;
+                                background-color: #f5f5fa;
                                 &:active {
                                     color: $secondaryColor;
-                                    background-color: #E6E6F0;
+                                    background-color: #e6e6f0;
                                 }
                                 &::after {
                                     border: 0;
@@ -531,7 +543,7 @@
             }
         }
         .hero {
-            .hero__img--wrap {
+            .img--wrap {
                 img {
                     transform: translateX(-27%);
                 }
@@ -560,17 +572,17 @@
             }
         }
     }
-    .prim_header {
+    .prim__header {
         overflow: visible;
         .header {
             padding-bottom: 10px;
             .header__item {
-                .contact {
-                    background-color: #F5F5FA;
+                .contacts {
+                    background-color: #f5f5fa;
                 }
                 .nav {
                     .nav__list {
-                        background-color: #F5F5FA;
+                        background-color: #f5f5fa;
                         .nav__item {
                             .nav__link {
                                 background-color: $light;

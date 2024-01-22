@@ -1,20 +1,20 @@
-$mainColor: #F0145A;
+$mainColor: #f0145a;
 $mainColorActive: rgba(185, 17, 70);
-$secondaryColor: #24A3FF;
+$secondaryColor: #24a3ff;
 $secondaryColorActive: #1a77b9;
 $primaryColor: #323264;
-$phantomColor: #B3B3BA;
+$phantomColor: #b3b3ba;
 $light: white;
 $dark: black;
-$mainTransition: .2s;
+$mainTransition: 0.2s;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -22,7 +22,7 @@ body {
     margin: 0 auto;
 }
 
-.goToPage {
+.to__page {
     position: relative;
     padding-bottom: 20px;
     font-size: 14px;
@@ -33,7 +33,7 @@ body {
     color: $secondaryColor;
     display: inline-block;
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 10%;
         left: 105%;
@@ -65,7 +65,7 @@ body {
     &:empty {
         width: 6px;
         height: 6px;
-        background: #B3B3BA;
+        background: #b3b3ba;
         border-radius: 60px;
         border-radius: 60px;
     }

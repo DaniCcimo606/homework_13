@@ -9,7 +9,7 @@
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
             width: 100%;
-            .footer__info {
+            .address {
                 padding-bottom: 21px;
                 display: flex;
                 align-items: center;
@@ -31,11 +31,11 @@
                     }
                 }
             }
-            .footer__contact {
+            .contacts {
                 grid-row-start: 2;
                 display: flex;
                 align-items: center;
-                .footer__contact--social {
+                .contacts__social {
                     font-size: 0;
                     &:hover {
                         svg {
@@ -57,11 +57,11 @@
                         }
                     }
                 }
-                .footer__contact--number {
+                .contacts__number {
                     font-weight: 700;
                     color: $primaryColor;
                 }
-                .footer__contact--mail {
+                .contacts__mail {
                     font-weight: 700;
                     transition: $mainTransition;
                     color: $secondaryColor;
@@ -73,7 +73,7 @@
                     }
                 }
             }
-            .footer__marking {
+            .marking {
                 grid-column-start: 2;
                 justify-self: end;
                 span {
@@ -92,7 +92,7 @@
         .footer {
             .footer__item {
                 white-space: nowrap;
-                .footer__contact {
+                .contacts {
                     grid-column-start: 1;
                     grid-column-end: 3;
                 }
@@ -112,23 +112,23 @@
                 .empty {
                     display: none;
                 }
-                .footer__contact, .footer__info, .footer__marking {
+                .contacts, .address, .marking {
                     grid-column-start: auto;
                     grid-column-end: auto;
                     gap: 10px;
                 }
-                .footer__contact {
+                .contacts {
                     grid-row-start: 2;
                     grid-row-end: 3;
                     flex-direction: column;
                 }
-                .footer__info {
+                .address {
                     grid-row-start: 1;
                     grid-row-end: 2;
                     flex-direction: column;
                     padding: 0;
                 }
-                .footer__marking {
+                .marking {
                     grid-row-start: 3;
                     grid-row-end: 4;
                 }

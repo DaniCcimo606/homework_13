@@ -11,18 +11,13 @@
                 column-gap: 60px;
                 grid-template-rows: auto auto auto;
                 align-items: start;
-                .main__item__img {
+                .img--wrap {
                     grid-row-start: 1;
                     grid-row-end: 4;
-                    a {
-                        img {
-
-                        }
-                    }
                 }
-                .main__item__title {
+                .profile {
                     align-self: start;
-                    .main__item__title__heading {
+                    .profile__heading {
                         margin-bottom: 15px;
                         h1 {
                             font-size: 38px;
@@ -30,7 +25,7 @@
                             color: $mainColor;
                         }
                     }
-                    .main__item__title__description {
+                    .profile__desc {
                         display: flex;
                         align-items: center;
                         .job {
@@ -44,7 +39,7 @@
                                 color: $secondaryColorActive;
                             }
                         }
-                        .profile {
+                        .social {
                             color: $secondaryColor;
                             &:active {
                                 color: $secondaryColorActive;
@@ -52,9 +47,9 @@
                         }
                     }
                 }
-                .main__item__description {
+                .about {
                     padding-top: 30px;
-                    border-top: 4px solid #E6E6F0;
+                    border-top: 4px solid #e6e6f0;
                     p {
                         margin-bottom: 30px;
                         &:last-child {
@@ -70,8 +65,8 @@
                         color: $primaryColor;
                     }
                 }
-                .main__item__contact {
-                    .main__item__contact__btn {
+                .contact {
+                    .contact__btn {
                         width: fit-content;
                         font-size: 20px;
                         font-weight: 700;
@@ -90,14 +85,14 @@
                     .pop-up.show {
                         opacity: 1;
                         transform: scale(1) translate(0);
-                        transition: .3s ease-in;
+                        transition: 0.3s ease-in;
                         z-index: 2;
                     }
                     .pop-up {
                         position: fixed;
                         height: 100%;
                         width: 100%;
-                        transform: scale(.1) translate(-25%, -25%);
+                        transform: scale(0.1) translate(-25%, -25%);
                         transform-origin: top left;
                         transition: 0s;
                         opacity: 0;
@@ -111,10 +106,13 @@
                             transform: translate(-75%, 75%);
                             cursor: pointer;
                             &:hover {
-                                background-color: #E6E6F0;
+                                background-color: #e6e6f0;
                             }
                             &:active {
-                                background-color: darken($color: #E6E6F0, $amount: 3);
+                                background-color: darken(
+                                    $color: #e6e6f0,
+                                    $amount: 3
+                                );
                             }
                         }
                         .pop-up__bg {
@@ -123,25 +121,32 @@
                             align-items: center;
                             height: 100%;
                             width: 100%;
-                            background-color: rgba($color: $primaryColor, $alpha: .8);
+                            background-color: rgba(
+                                $color: $primaryColor,
+                                $alpha: 0.8
+                            );
                             .pop-up__content {
                                 position: relative;
                                 padding: 30px;
                                 border-radius: 12px;
-                                background-color: #F5F5FA;
-                                .pop-up__content__title {
+                                background-color: #f5f5fa;
+                                .pop-up__title {
                                     padding-right: 50px;
                                     h2 {
                                         margin-bottom: 30px;
                                         font-size: 38px;
                                         font-weight: 700;
-                                        background: linear-gradient(90deg, #F0145A 0.84%, #EF8080 99.96%);
+                                        background: linear-gradient(
+                                            90deg,
+                                            #f0145a 0.84%,
+                                            #ef8080 99.96%
+                                        );
                                         background-clip: text;
                                         -webkit-background-clip: text;
                                         -webkit-text-fill-color: transparent;
                                     }
                                 }
-                                .pop-up__content__form {
+                                .pop-up__form {
                                     form {
                                         display: flex;
                                         flex-direction: column;
@@ -170,7 +175,8 @@
                                             border-radius: 12px;
                                             font-weight: 700;
                                             cursor: pointer;
-                                            box-shadow: 0px 0px 20px 0px rgba(36, 163, 255, 0.50);
+                                            box-shadow: 0px 0px 20px 0px
+                                                rgba(36, 163, 255, 0.5);
                                             color: $light;
                                             background-color: $secondaryColor;
                                         }
@@ -191,12 +197,8 @@
             .main {
                 padding: 0;
                 .main__item {
-                    .main__item__title {
-                        .main__item__title__heading {
-                            h1 {
-                            }
-                        }
-                        .main__item__title__description {
+                    .profile {
+                        .profile__desc {
                             flex-direction: column;
                             gap: 10px;
                             align-items: start;
@@ -204,19 +206,9 @@
                             .empty {
                                 display: none;
                             }
-                            .job {
-                            }
-                            .email {
-                                &:active {
-                                }
-                            }
-                            .profile {
-                                &:active {
-                                }
-                            }
                         }
                     }
-                    .main__item__contact {
+                    .contact {
                         padding-top: 30px;
                     }
                 }
@@ -233,7 +225,7 @@
                     grid-template-columns: 1fr 1fr;
                     grid-template-rows: repeat(3, auto);
                     grid-gap: 30px;
-                    .main__item__img {
+                    .img--wrap {
                         grid-row-start: 1;
                         grid-row-end: 2;
                         grid-column-start: 1;
@@ -248,35 +240,17 @@
                             }
                         }
                     }
-                    .main__item__title {
+                    .profile {
                         grid-column-start: 2;
                         align-self: center;
                         width: 100%;
-                        .main__item__title__heading {
-                            h1 {
-                            }
-                        }
-                        .main__item__title__description {
-                            .empty {
-                            }
-                            .job {
-                            }
-                            .email {
-                                &:active {
-                                }
-                            }
-                            .profile {
-                                &:active {
-                                }
-                            }
-                        }
                     }
-                    .main__item__description {
+                    .about {
                         grid-row-start: 2;
                         grid-column-start: 1;
                         grid-column-end: 3;
                     }
-                    .main__item__contact {
+                    .contact {
                         padding: 0;
                     }
                 }
@@ -292,54 +266,29 @@
                 .main__item {
                     grid-template-columns: repeat(1, 1fr);
                     grid-template-rows: repeat(4, auto);
-                    .main__item__img, .main__item__title, .main__item__description, .main__item__contact {
+                    .img--wrap,
+                    .profile,
+                    .about,
+                    .contact {
                         grid-column-start: auto;
                         grid-column-end: auto;
                         grid-row-start: auto;
                         grid-row-end: auto;
                     }
-                    .main__item__img {
+                    .img--wrap {
                         padding-top: 30px;
-                        a {
-                            img {
-                            }
-                        }
                     }
-                    .main__item__title {
-                        .main__item__title__heading {
-                            h1 {
-                            }
-                        }
+                    .profile {
                         .main__item__title__description {
                             padding: 0;
-                            .empty {
-                            }
-                            .job {
-                            }
-                            .email {
-                                &:active {
-                                }
-                            }
-                            .profile {
-                                &:active {
-                                }
-                            }
                         }
                     }
-                    .main__item__description {
-                    }
-                    .main__item__contact {
+                    .contact {
                         .pop-up {
-                            .pop-up__close {
-                                &:hover {
-                                }
-                                &:active {
-                                }
-                            }
                             .pop-up__bg {
                                 .pop-up__content {
                                     width: 75%;
-                                    .pop-up__content__title {
+                                    .pop-up__title {
                                         h2 {
                                             font-size: 30px;
                                         }

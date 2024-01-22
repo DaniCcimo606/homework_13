@@ -6,101 +6,103 @@
         .main__item {
             display: flex;
             justify-content: center;
-            h1 {
+            .heading {
                 width: 83%;
                 padding-bottom: 60px;
                 font-size: 38px;
                 font-weight: 700;
-                background: linear-gradient(90deg, #F0145A 0.84%, #EF8080 99.96%);
+                background: linear-gradient(
+                    90deg,
+                    #f0145a 0.84%,
+                    #ef8080 99.96%
+                );
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
-            .main__grid {
-                .row {
-                    display: grid;
-                    grid-template-columns: repeat(3, auto);
-                    grid-template-rows: repeat(2, auto);
-                    grid-gap: 60px;
-                    padding-bottom: 60px;
-                    .col {
-                        .img-wrap {
-                            display: block;
-                            &:hover ~ .title {
-                                .title__text {
-                                    h4 {
-                                        color: $mainColor;
-                                    }
+            .team__list {
+                display: grid;
+                grid-template-columns: repeat(3, auto);
+                grid-template-rows: repeat(2, auto);
+                grid-gap: 60px;
+                padding-bottom: 60px;
+                .team__item {
+                    .img--wrap {
+                        display: block;
+                        &:hover ~ .section {
+                            .desk {
+                                h4 {
+                                    color: $mainColor;
                                 }
-                                .btn-wrap {
-                                    svg {
-                                        path {
-                                            stroke: $mainColor;
-                                        }
+                            }
+                            .btn--wrap {
+                                svg {
+                                    path {
+                                        stroke: $mainColor;
                                     }
                                 }
                             }
-                            &:active ~ .title {
-                                .title__text {
-                                    h4 {
-                                        color: $mainColorActive;
+                        }
+                        &:active ~ .section {
+                            .desk {
+                                h4 {
+                                    color: $mainColorActive;
+                                    transition: 0s;
+                                }
+                            }
+                            .btn--wrap {
+                                svg {
+                                    path {
+                                        stroke: $mainColorActive;
                                         transition: 0s;
                                     }
                                 }
-                                .btn-wrap {
-                                    svg {
-                                        path {
-                                            stroke: $mainColorActive;
-                                            transition: 0s;
-                                        }
-                                    }
-                                }
-                            }
-                            img {
-                                display: block;
-                                width: 500px;
-                                height: 400px;
-                                border-radius: 12px;
-                                object-fit: cover;
                             }
                         }
-                        .title {
+                        img {
+                            display: block;
+                            width: 500px;
+                            height: 400px;
+                            border-radius: 12px;
+                            object-fit: cover;
+                        }
+                    }
+                    .section {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .desk {
                             display: flex;
-                            justify-content: space-between;
-                            align-items: center;
-                            .title__text {
-                                display: flex;
-                                flex-direction: column;
-                                h4 {
-                                    padding: 15px 0 5px;
-                                    font-weight: 700;
-                                    transition: $mainTransition;
-                                    color: $primaryColor;
-                                }
-                                span {
-                                    font-size: 14px;
-                                    color: $phantomColor;
-                                }
+                            flex-direction: column;
+                            h4 {
+                                padding: 15px 0 5px;
+                                font-weight: 700;
+                                transition: $mainTransition;
+                                color: $primaryColor;
                             }
-                            .btn-wrap {
-                                font-size: 0;
-                                &:hover {
-                                    svg {
-                                        path {
-                                            stroke: $mainColor;
-                                        }
-                                    }
-                                }
-                                &:active {
-                                    svg {
-                                        path {
-                                            stroke: $mainColorActive;
-                                        }
-                                    }
-                                }
+                            span {
+                                font-size: 14px;
+                                color: $phantomColor;
+                            }
+                        }
+                        .btn--wrap {
+                            font-size: 0;
+                            &:hover {
                                 svg {
                                     path {
-                                        transition: $mainTransition;
+                                        stroke: $mainColor;
                                     }
+                                }
+                            }
+                            &:active {
+                                svg {
+                                    path {
+                                        stroke: $mainColorActive;
+                                    }
+                                }
+                            }
+                            svg {
+                                path {
+                                    transition: $mainTransition;
                                 }
                             }
                         }
@@ -117,25 +119,27 @@
             * {
                 width: fit-content;
             }
-            .slider__img-wrap {
+            .img--wrap {
                 border-radius: 12px 0px 0px 12px;
                 overflow: hidden;
                 font-size: 0;
-                img {
-                }
             }
-            .slider__profile {
+            .profile {
                 padding: 30px;
                 border-radius: 0px 12px 12px 0px;
-                background-color: #EDEDF7;
-                .goToPage {
+                background-color: #ededf7;
+                .to__page {
                     padding-bottom: 20px;
                 }
-                .slider__heading {
+                .profile__heading {
                     padding-bottom: 30px;
                     font-size: 38px;
                     font-weight: 700;
-                    background: linear-gradient(90deg, #F0145A 0.84%, #EF8080 99.96%);
+                    background: linear-gradient(
+                        90deg,
+                        #f0145a 0.84%,
+                        #ef8080 99.96%
+                    );
                     background-clip: text;
                     -webkit-text-fill-color: transparent;
                 }
@@ -158,9 +162,9 @@
             padding-top: 30px;
             display: flex;
             justify-content: center;
-            .slider__btn--item-wrap {
+            .wrapper {
                 display: flex;
-                .slider__btn--item {
+                .slide-btn {
                     display: block;
                     margin-right: 15px;
                     transition: $mainTransition;
@@ -177,7 +181,7 @@
                         transition: 0s;
                         background-color: $secondaryColorActive;
                     }
-                    &.slider__btn--item--target {
+                    &.slide-btn--target {
                         background-color: $secondaryColor;
                     }
                 }
@@ -190,15 +194,13 @@
     .team {
         .main {
             .main__item {
-                .main__grid {
-                    .row {
-                        gap: 60px;
-                        .col {
-                            .img-wrap {
-                                img {
-                                    height: 400px;
-                                    width: 400px;
-                                }
+                .team__list {
+                    gap: 60px;
+                    .team__item {
+                        .img--wrap {
+                            img {
+                                height: 400px;
+                                width: 400px;
                             }
                         }
                     }
@@ -212,15 +214,13 @@
     .team {
         .main {
             .main__item {
-                .main__grid {
-                    .row {
-                        gap: 60px;
-                        .col {
-                            .img-wrap {
-                                img {
-                                    height: 400px;
-                                    width: 260px;
-                                }
+                .team__list {
+                    gap: 60px;
+                    .team__item {
+                        .img--wrap {
+                            img {
+                                height: 400px;
+                                width: 260px;
                             }
                         }
                     }
@@ -235,39 +235,13 @@
         .slider {
             .slider__item {
                 height: 500px;
-                * {
-                }
-                .slider__img-wrap {
+                .img--wrap {
                     img {
                         height: 100%;
                     }
                 }
-                .slider__profile {
+                .profile {
                     width: 60%;
-                    .goToPage {
-                    }
-                    .slider__heading {
-                    }
-                    h4 {
-                    }
-                    p {
-                    }
-                }
-                &.slider__item--target {
-                }
-            }
-            .slider__btn {
-                .slider__btn--item-wrap {
-                    .slider__btn--item {
-                        &:last-child {
-                        }
-                        &:empty {
-                        }
-                        &:active {
-                        }
-                        &.slider__btn--item--target {
-                        }
-                    }
                 }
             }
         }
@@ -280,9 +254,7 @@
             .slider__item {
                 flex-direction: column;
                 height: auto;
-                * {
-                }
-                .slider__img-wrap {
+                .img--wrap {
                     border-radius: 12px 12px 0 0;
                     width: 100%;
                     height: 500px;
@@ -291,33 +263,9 @@
                         height: auto;
                     }
                 }
-                .slider__profile {
+                .profile {
                     border-radius: 0 0 12px 12px;
                     width: 100%;
-                    .goToPage {
-                    }
-                    .slider__heading {
-                    }
-                    h4 {
-                    }
-                    p {
-                    }
-                }
-                &.slider__item--target {
-                }
-            }
-            .slider__btn {
-                .slider__btn--item-wrap {
-                    .slider__btn--item {
-                        &:last-child {
-                        }
-                        &:empty {
-                        }
-                        &:active {
-                        }
-                        &.slider__btn--item--target {
-                        }
-                    }
                 }
             }
         }
@@ -328,21 +276,19 @@
     .team {
         .main {
             .main__item {
-                h1 {
+                .heading {
                     width: 100%;
                 }
-                .main__grid {
-                    .row {
-                        grid-template-columns: repeat(2, 1fr);
-                        grid-template-rows: repeat(3, auto);
-                        .col {
-                            .img-wrap {
-                                height: 400px;
-                                width: auto;
-                                img {
-                                    height: 100%;
-                                    width: 100%;
-                                }
+                .team__list {
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(3, auto);
+                    .team__item {
+                        .img--wrap {
+                            height: 400px;
+                            width: auto;
+                            img {
+                                height: 100%;
+                                width: 100%;
                             }
                         }
                     }
@@ -356,59 +302,27 @@
     .team {
         .main {
             .main__item {
-                h1 {
+                .heading {
                     padding: 30px 0;
                     font-size: 30px;
                 }
-                .main__grid {
-                    .row {
-                        grid-template-columns: repeat(1, 1fr);
-                        grid-template-rows: repeat(6, auto);
-                        .col {
-                            .img-wrap {
-                                img {
-                                }
-                            }
-                        }
-                    }
+                .team__list {
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-template-rows: repeat(6, auto);
                 }
             }
         }
         .slider {
             .slider__item {
-                * {
-                }
-                .slider__img-wrap {
+                .img--wrap {
                     img {
                         width: auto;
                         height: 100%;
                     }
                 }
-                .slider__profile {
-                    .goToPage {
-                    }
-                    .slider__heading {
+                .profile {
+                    .profile__heading {
                         font-size: 30px;
-                    }
-                    h4 {
-                    }
-                    p {
-                    }
-                }
-                &.slider__item--target {
-                }
-            }
-            .slider__btn {
-                .slider__btn--item-wrap {
-                    .slider__btn--item {
-                        &:last-child {
-                        }
-                        &:empty {
-                        }
-                        &:active {
-                        }
-                        &.slider__btn--item--target {
-                        }
                     }
                 }
             }
